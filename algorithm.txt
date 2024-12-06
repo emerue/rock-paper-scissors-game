@@ -1,3 +1,5 @@
+ALGORITHM
+
 rock paper scissors game
 
 get user choice
@@ -13,4 +15,4 @@ add +1 to round
 
 ask user to proceed game 
 
-if round is not up to 5, loop 
+if round is not up to 5, loop game 

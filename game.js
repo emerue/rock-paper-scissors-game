@@ -22,16 +22,16 @@ function getUserChoice(round = "ROUND-" + (maxround - roundleft + 1)) {
     let modUserchoice = userChoice.toLowerCase();
     userChoiceValid = choices.includes( modUserchoice);
     if (userChoiceValid == true){
-        // console.log(`${modUserchoice} is a valid choice`);
+       
         
         return (modUserchoice);
 
     }
     else{
         alert(`${modUserchoice} is not a valid choice. make another choice`);
-        // roundleft = roundleft +1 ;
+   
         return "INVALID";
-        // getUserChoice();
+        
 
 
     }
@@ -45,27 +45,24 @@ function getUserChoice(round = "ROUND-" + (maxround - roundleft + 1)) {
 function getComputerChoice(){
     let randomIndex = Math.floor(Math.random() * choices.length );
     let ComputerChoice = choices[randomIndex];
-    // console.log(`computer Choice is ${ComputerChoice}` );
-    // 
+    
 
     return (ComputerChoice);
 
 };
 
-// console.log(getUserChoice());
-// console.log(getComputerChoice());
-// playRound(getUserChoice(), getComputerChoice());
 
 
-// comppare choice to play round 
 
 
-// recieve computer choice and user choice 
-// check for winner 
-// add score to winner 
-// dont add score for draw
-//add +1 to round
 
+
+ 
+
+
+
+
+// start game function
 function startgame(){
     alert("begin game");
 
@@ -105,33 +102,34 @@ function startgame(){
 };
 
 
-// startgame();
 
-
-
+// comppare choice to play round 
 function playRound( ){
 
    
 
-
+    // recieve computer choice and user choice
     let userChoice = getUserChoice();
 
-        // keep looping till you get valid answer then proceed
-
+     // keep looping till you get valid answer then proceed
     while (userChoice === "INVALID"){
         userChoice = getUserChoice()
 
     };
-
-
-
+    // get computer choice
     let computerChoice = getComputerChoice();
+
+    // check for winner 
+    // add score to winner 
+    // add scores for draws
+    //add -1 to roundleft
+    // update user of result using console and alert
 
     console.log (` round-${round + 1} :: user choice: ${userChoice},   computer choice:  ${computerChoice}`  );
 
     alert(` round-${round + 1} :: user choice: ${userChoice},   computer choice:  ${computerChoice}`  );
 
-
+     // rock wins scissors, scissors wins paper and paper wins rock
 
         if (userChoice == computerChoice  ){
             roundStatement = "this is a draw";
@@ -208,17 +206,11 @@ function playRound( ){
 
     };
     
-   // rock wins scissors, scissors wins paper and paper wins rock
+  
 
 
 
 // playRound();
 
 
-// add score for winner
-
-// add +1 to round  
-// ask user to proceed game  
-
-// if round is not up to 5, loop game
 
