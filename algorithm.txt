@@ -1,0 +1,16 @@
+rock paper scissors game
+
+get user choice
+
+get computer choice
+
+
+comppare choice to check winer
+
+add score for winner
+
+add +1 to round 
+
+ask user to proceed game 
+
+if round is not up to 5, loop 
